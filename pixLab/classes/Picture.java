@@ -309,7 +309,7 @@ public class Picture extends SimplePicture
     }
   }
   
-  public void mirrorGulls() {
+  public void mirrorGull() {
     Pixel[][] pixels = this.getPixels2D();
     for(int row = 234; row < 330; row++) {
       for(int col = 238; col < 341; col++) {
