@@ -71,13 +71,6 @@ public class PictureTester
 	aardvark.grayscale();
 	aardvark.explore();
     }
-
-    //EXERCISE #6
-    public static void testFixUnderwater() {
-	Picture fish = new Picture("water.jpg");
-        fish.fixUnderwater();
-        fish.explore();
-    }
   
     /** Main method for testing.  Every class can have a main
      * method in Java */
@@ -91,8 +84,8 @@ public class PictureTester
 	//testKeepOnlyRed();
 	//testKeepOnlyGreen();
 	//testNegate();
-	//testGrayscale();
-	testFixUnderwater();
+	testGrayscale();
+	//testFixUnderwater();
 	//testMirrorVertical();
 	//testMirrorTemple();
 	//testMirrorArms();
