@@ -51,24 +51,39 @@ public class PictureTester
 	swan.explore();
     }
 
-    //EXERCISE #3
     public static void testKeepOnlyBlue() {
 	Picture aardvark = new Picture("Aardvark.jpg");
 	aardvark.keepOnlyBlue();
 	aardvark.explore();
     }
     
-    //EXERCISE #4
     public static void testNegate() {
 	Picture aardvark = new Picture("Aardvark.jpg");
 	aardvark.negate();
 	aardvark.explore();
     }
 
-    //EXERCISE #5
     public static void testGrayscale() {
 	Picture aardvark = new Picture("Aardvark.jpg");
 	aardvark.grayscale();
+	aardvark.explore();
+    }
+
+    public static void testMirrorVerticalRightToLeft() {
+	Picture aardvark = new Picture("Aardvark.jpg");
+	aardvark.mirrorVerticalRightToLeft();
+	aardvark.explore();
+    }
+
+    public static void testMirrorHorizontal() {
+	Picture aardvark = new Picture("Aardvark.jpg");
+	aardvark.mirrorHorizontal();
+	aardvark.explore();
+    }
+
+    public static void testMirrorHorizontalBotToTop() {
+	Picture aardvark = new Picture("Aardvark.jpg");
+	aardvark.mirrorHorizontalBotToTop();
 	aardvark.explore();
     }
   
@@ -84,9 +99,12 @@ public class PictureTester
 	//testKeepOnlyRed();
 	//testKeepOnlyGreen();
 	//testNegate();
-	testGrayscale();
+	//testGrayscale();
 	//testFixUnderwater();
 	//testMirrorVertical();
+	//testMirrorVerticalRightToLeft();
+	//testMirrorHorizontal();
+	testMirrorHorizontalBotToTop();
 	//testMirrorTemple();
 	//testMirrorArms();
 	//testMirrorGull();
