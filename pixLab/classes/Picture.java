@@ -138,7 +138,9 @@ public class Picture extends SimplePicture
 			rightPixel = pixels[row]                       
 			    [mirrorPoint - col + mirrorPoint];
 			rightPixel.setColor(leftPixel.getColor());
+			count++;
 		    }
+		System.out.println(count);
 	    }
     }
   
@@ -298,7 +300,6 @@ public class Picture extends SimplePicture
 		    }
 	    } 
     }
-
   
     /* Main method for testing - each class in Java can have a main 
      * method 
