@@ -99,6 +99,11 @@ public class PictureTester
     seagull.explore();
   }
   
+  public static void testMyCollage() {
+    Picture koala = new Picture("koala.jpg");
+    koala.myCollage();
+  }
+  
     /** Main method for testing.  Every class can have a main
      * method in Java */
     public static void main(String[] args)
@@ -122,6 +127,7 @@ public class PictureTester
 	testMirrorGull();
 	//testMirrorDiagonal();
 	//testCollage();
+	//testMyCollage();
 	//testCopy();
 	//testEdgeDetection();
 	//testEdgeDetection2();
