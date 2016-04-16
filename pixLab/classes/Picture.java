@@ -340,6 +340,44 @@ public class Picture extends SimplePicture
     toPixels.copy(seagull.mirrorGull(), 100, 0);
     toPixels.copy(seagull.mirrorVertical(), 200, 0);
   }
+  
+  public void edgeDetection2(int edgeDist) {
+    Pixel pix = null;
+    Color upPix = null;
+    Color downPix = null;
+    Color rightPix = null;
+    boolean last = pixels.length % 2 == 0
+    Pixel[][] pixels = this.getPixels2D();
+    if (last) int LL = pixels.length - 1;
+    else int LL = pixels.length;
+    for (int row = 1; row < LL; row += 2) {
+      for (int col = 0; col < pixels[0].length-1; col++) {
+        pix = pixels[row][col];
+        upPix = pixels[row-1][col].getColor();
+        downPix = pixels[row+1][col].getColor();
+        rightPix = pixels[row][col+1].getColor();
+        if ( pix.colorDistance(upPix) > edgeDist || pix.colorDistance(downPix) > edgeDist || pix.colorDistance(rightPix) )
+          pix.setColor(Color.BLACK);
+        else pix.setColor(Color.WHITE);
+      }
+    }
+    for (int row = 0; row < pixels.length; row+=2) {
+      for (int col = 0; col < pixels[0].length - 1; col++) {
+        pix = pixels[row][col];
+        rightPix = pixels[row][col+1].getColor();
+        if ( pix.colorDistance(rightPix) > edgeDist ) pix.setColor(Color.BLACK);
+        else pix.setColor(Color.WHITE);
+      }
+    }
+    if (last) {
+      for (int col = 0; col < pixels[0].length - 1; col++) {
+        pix = pixels[pixels.length - 1][col];
+        rightPix = pixels[pixels.length - 1][col + 1].getColor();
+        if ( pix.colorDistance(rightPix) > edgeDist ) pix.setColor(Color.BLACK);
+        else pix.setColor(Color.WHITE);
+      }
+    }
+  }
     /* Main method for testing - each class in Java can have a main 
      * method 
      */
